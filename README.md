@@ -11,11 +11,9 @@ Security & IT, Starknet Foundation
 
 ## Repository visibility
 
-This repository is private by default. The policy file it serves is public
-via GitHub Pages at the URL above. Keeping the source private reduces
-reconnaissance surface (commit history, contributor patterns, tooling
-signals) without affecting the served content. External auditors can be
-granted read access on request.
+This repository is public. The policy file it hosts is also publicly served
+via GitHub Pages, so there is no benefit to restricting source access.
+Branch protection on `main` ensures policy changes go through review.
 
 ## How updates work
 
