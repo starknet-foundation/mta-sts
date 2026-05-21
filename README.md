@@ -22,7 +22,7 @@ granted read access on request.
 Policy changes require two coordinated steps:
 
 1. Edit `.well-known/mta-sts.txt` via pull request, get review, merge to `main`
-2. Update the `_mta-sts` TXT record in GoDaddy DNS with a new `id` value
+2. Update the `_mta-sts` TXT record in Registrar DNS with a new `id` value
    (UTC timestamp format: YYYYMMDDTHHMMSSZ)
 
 Both steps are required. External mail servers re-fetch the policy only when
@@ -37,7 +37,7 @@ the `id` in DNS changes. Without step 2, cached policies persist for up to
 
 ## Break-glass: disable MTA-STS
 
-Remove the `_mta-sts` TXT record from DNS in GoDaddy. Cached policies expire
+Remove the `_mta-sts` TXT record from DNS in Registrar. Cached policies expire
 per `max_age` (7 days). Senders that don't support MTA-STS are unaffected.
 
 ## TLS reports
